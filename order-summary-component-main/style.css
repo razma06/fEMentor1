@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,600;0,800;1,400&display=swap');
+/* Red Hat Display */
+
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);  
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%)
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    color: var(--Dark-blue);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+}
+
+@media screen and (max-width: 600px) {
+    .grid{
+        transform: scale(0.6, 0.6);
+    }
+
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+}
+
+.grid{
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: white;
+    display: grid;
+    width: 28rem;
+    height: 42rem;
+    grid-template-rows: 13rem 2.5fr 1.3fr 1fr 1fr;
+}
+
+.top {
+    width: 100%;
+    height: 100%;
+}
+
+.top > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middle{
+    width: 80%;
+    justify-self: center;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    padding: 5%;
+}
+
+.middle p{
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--Desaturated-blue);
+}
+
+.flex-col{
+    justify-self: center;
+    width: 80%;
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex-col .circ{
+    margin-right: 5%;
+}
+
+.flex-col a{
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+.flex-right{
+    margin-left: auto;
+}
+
+.btn{
+    margin-top: 1.5rem;
+    height: 70%;
+    width: 80%;
+    margin-inline: auto;
+    box-shadow: 0 0.5rem 10px 5px rgba(0, 0, 100, 0.1);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.btn button{
+    height: 100%;
+    width: 100%;
+    background-color: var(--Bright-blue);
+    border: none;
+    font-family: "Red Hat Display";
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bg-none{
+    color: var(--Desaturated-blue)!important;
+    background-color: transparent !important;
+}
+
+button{
+    cursor: pointer;
+}
